@@ -6,6 +6,7 @@
   <title>Catálogo de Bordados | Vicosiendo</title>
   <link rel="stylesheet" href="catalogo.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -89,6 +90,38 @@
   <footer>
     <p>© 2025 Vicosiendo. Hecho a mano con cariño. 🧵</p>
   </footer>
+    <!-- Modal para imágenes ampliadas -->
+<div class="modal" id="imageModal">
+    <span class="modal-close" id="closeModal">&times;</span>
+    <img id="modalImage" src="" alt="Imagen ampliada" />
+  </div>
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+  
+    document.querySelectorAll(".image-slider img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.classList.add("open");
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+      });
+    });
+  
+    closeModal.addEventListener("click", () => {
+      modal.classList.remove("open");
+      modalImg.src = "";
+    });
+  
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("open");
+        modalImg.src = "";
+      }
+    });
+  </script>
+  
+  
 </body>
 </html>
 
