@@ -1,0 +1,118 @@
+/* ====== ESTILO GLOBAL ====== */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f0f6;
+    color: #1f1f1f;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  /* ====== HEADER ====== */
+  header {
+    padding: 3rem 1rem 2rem;
+    background-color: #d9a5d3;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  /* ====== GALERÍA DE PRODUCTOS ====== */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ====== TARJETA DE PRODUCTO ====== */
+  .item {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* ====== CARRUSEL DE IMÁGENES ====== */
+  .image-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    background-color: #fdf9fc;
+  }
+  
+  .image-slider img {
+    width: 240px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    object-fit: cover;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .image-slider img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* ====== INFO DE PRODUCTO ====== */
+  .info {
+    padding: 1.2rem 1rem;
+  }
+  
+  .info h3 {
+    margin: 0 0 6px;
+    font-size: 1.1rem;
+    color: #4b4b4b;
+  }
+  
+  .price {
+    font-size: 1rem;
+    color: #a44f98;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  /* ====== FOOTER ====== */
+  footer {
+    padding: 2rem 1rem;
+    background-color: #d9a5d3;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+  
+  /* ====== SCROLL PERSONALIZADO (Opcional) ====== */
+  .image-slider::-webkit-scrollbar {
+    height: 8px;
+  }
+  .image-slider::-webkit-scrollbar-thumb {
+    background: #d9a5d3;
+    border-radius: 4px;
+  }
+  .image-slider::-webkit-scrollbar-track {
+    background: #f5f0f6;
+  }
+  
+  
